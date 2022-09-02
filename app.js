@@ -1,11 +1,11 @@
-var hesapA = {
+let hesapA = {
   ad: `Sena Turan`,
   hesapNo: `12345678`,
   bakiye: `2000`,
   ekHesap: `1000`,
 };
 
-var hesapB = {
+let hesapB = {
   ad: `Emel Turan`,
   hesapNo: `12345789`,
   bakiye: `3000`,
@@ -18,12 +18,12 @@ function paraCek(hesap, miktar) {
     hesap.bakiye = hesap.bakiye - miktar;
     console.log(`Paranızı Alabilirsiniz`);
   } else {
-    var toplam = hesap.bakiye + hesap.ekHesap;
+    let toplam = hesap.bakiye + hesap.ekHesap;
     if (toplam >= miktar) {
       if (confirm(`Ek hesabınızı Kullanmak İster misiniz?`)) {
         console.log(`Paranızı Alabilirsiniz`);
-        var bakiye = hesap.bakiye;
-        var ekHesap = miktar - bakiye;
+        let bakiye = hesap.bakiye;
+        let ekHesap = miktar - bakiye;
         hesap.bakiye = 0;
         hesap.ekHesap = hesap.ekHesap - ekHesap;
       } else {
